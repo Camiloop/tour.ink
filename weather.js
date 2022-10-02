@@ -4,7 +4,7 @@ const weatherApp = async (city) => {
   const apiKey = '9f4409f81f67d5e4c9fc69aef96d6494';
 
   try {
-    const geoCoding = await axios(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`)
+    const geoCoding = await axios(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`)
     const lat = geoCoding.data[4].lat
     const lon = geoCoding.data[4].lon
 
